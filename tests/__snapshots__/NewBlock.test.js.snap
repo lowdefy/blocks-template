@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`default 1`] = `
+<div>
+  New Lowdefy block 
+</div>
+`;
+
+exports[`propertyTitle 1`] = `
+<div>
+  New Lowdefy block 
+  with title: Foo
+</div>
+`;

@@ -16,11 +16,12 @@
 
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { blockDefaults } from '@lowdefy/block-tools';
 
 const runExampleTests = (examples, Component) => {
   const makeCssClass = jest.fn();
   const makeCssImp = (style, op) => JSON.stringify({ style, options: op });
-
+  const Comp = blockDefaults(Component);
   beforeEach(() => {
     makeCssClass.mockReset();
     makeCssClass.mockImplementation(makeCssImp);
@@ -41,7 +42,7 @@ const runExampleTests = (examples, Component) => {
 
   examples.forEach((ex) => {
     test(ex.id, () => {
-      const component = renderer.create(<Component {...ex} methods={{ makeCssClass }} />);
+      const component = renderer.create(<Comp {...ex} methods={{ makeCssClass }} />);
       const tree = component.toJSON();
       expect(tree).toMatchSnapshot();
     });
