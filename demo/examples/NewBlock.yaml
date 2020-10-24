@@ -1,0 +1,9 @@
+- id: default
+  type: NewBlock
+  description: Default
+- id: propertyTitle
+  type: NewBlock
+  description: |
+    property.title: Foo
+  properties:
+    title: Foo
