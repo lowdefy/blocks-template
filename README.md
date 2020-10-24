@@ -1,2 +1,3 @@
-# blocks-antd
- Lowdefy Ant Design Blocks 
+# Lowdefy Blocks Template
+
+This is a starter repository for creating custom Lowdefy blocks.
