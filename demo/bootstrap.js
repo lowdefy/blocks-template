@@ -16,13 +16,15 @@
 
 import React from 'react';
 import { render } from 'react-dom';
-import { NewBlock } from '../src';
-import NewBlockExamples from './examples/NewBlock.yaml';
+import Blocks from '../src';
 import Examples from './Examples';
+import './app.css';
 
 const Demo = () => (
   <div id="page">
-    <Examples Component={NewBlock} examples={NewBlockExamples} title={'NewBlock'} />
+    {Object.keys(Blocks).map((key) => (
+      <Examples key={key} type={key} Component={Blocks[key]} />
+    ))}
   </div>
 );
 

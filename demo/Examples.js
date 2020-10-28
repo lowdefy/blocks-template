@@ -14,24 +14,56 @@
   limitations under the License.
 */
 
-import React from 'react';
-import { blockDefaults } from '@lowdefy/block-tools';
+import React, { useState } from 'react';
+import YAML from 'js-yaml';
+import { mockBlockProps, blockDefaults, BlockSchemaErrors } from '@lowdefy/block-tools';
+import yaml from 'react-syntax-highlighter/dist/esm/languages/hljs/yaml';
+import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
+import vs2015 from 'react-syntax-highlighter/dist/esm/styles/hljs/vs2015';
 
-const Examples = ({ title, examples, Component }) => {
-  const Comp = blockDefaults(Component);
+SyntaxHighlighter.registerLanguage('yaml', yaml);
+const logger = console.log;
+
+const Examples = ({ type, Component }) => {
+  const [showYaml, toggelYaml] = useState(true);
+  // duplicate imported yaml to be mutabile
+  const examples = JSON.parse(JSON.stringify(require(`./examples/${type}.yaml`)));
+  const meta = require(`../src/blocks/${type}/${type}.json`);
   return (
     <div>
-      <h1>{title}</h1>
-      {examples.map((ex) => (
-        <div key={ex.id}>
-          <h4>
-            {ex.type} {ex.description}
-          </h4>
-          <div style={{ ...{ padding: 20 }, ...ex.style }}>
-            <Comp {...ex} />
+      <h1>{type}</h1>
+      <div>
+        Render YAML:{' '}
+        <input type="checkbox" checked={showYaml} onChange={() => toggelYaml(!showYaml)} />
+      </div>
+      {(examples || []).map((block) => {
+        const exYaml = YAML.safeDump(block, {
+          // sortKeys: true,
+          noRefs: true,
+        });
+        const props = blockDefaults(mockBlockProps({ block, meta, logger }));
+        if (props.schemaErrors) console.log(props.schemaErrors);
+        return (
+          <div key={block.id}>
+            <h4 style={{ borderTop: '1px solid #b1b1b1', padding: 10, margin: 10 }}>
+              {type} {block.id}
+            </h4>
+            <div style={{ display: 'flex' }}>
+              {showYaml && (
+                <div style={{ minWidth: '30%' }}>
+                  <SyntaxHighlighter language="yaml" style={vs2015} showLineNumbers={true}>
+                    {exYaml}
+                  </SyntaxHighlighter>
+                  <BlockSchemaErrors schemaErrors={props.schemaErrors} />
+                </div>
+              )}
+              <div style={{ ...{ padding: 20, width: '100%' }, ...block.style }}>
+                <Component {...props} />
+              </div>
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 };
