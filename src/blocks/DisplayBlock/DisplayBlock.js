@@ -14,11 +14,22 @@
   limitations under the License.
 */
 
-import ContainerBlock from './blocks/ContainerBlock/ContainerBlock';
-import ContextBlock from './blocks/ContextBlock/ContextBlock';
-import DisplayBlock from './blocks/DisplayBlock/DisplayBlock';
-import InputBlock from './blocks/InputBlock/InputBlock';
-import ListBlock from './blocks/ListBlock/ListBlock';
+import React from 'react';
 
-export { ContainerBlock, ContextBlock, DisplayBlock, InputBlock, ListBlock };
-export default { ContainerBlock, ContextBlock, DisplayBlock, InputBlock, ListBlock };
+const DisplayBlock = ({ blockId, properties, methods, actions }) => (
+  <div
+    id={blockId}
+    data-testid={blockId}
+    onClick={() =>
+      methods.callAction({ action: 'onClick', hideLoading: properties.hideActionLoading })
+    }
+    className={methods.makeCssClass([
+      { outline: 'none', cursor: actions.onClick && 'pointer' },
+      properties.style,
+    ])}
+  >
+    New Lowdefy display block {properties.title && `with title: ${properties.title}`}
+  </div>
+);
+
+export default DisplayBlock;
