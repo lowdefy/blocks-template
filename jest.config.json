@@ -7,5 +7,5 @@
   "moduleNameMapper": {
     "\\.(css|less)$": "<rootDir>/tests/__mocks__/styleMock.js"
   },
-  "coveragePathIgnorePatterns": ["/tests/"]
+  "coveragePathIgnorePatterns": ["/tests/", "/demo/"]
 }
