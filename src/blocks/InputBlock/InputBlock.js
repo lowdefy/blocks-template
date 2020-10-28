@@ -15,19 +15,17 @@
 */
 
 import React from 'react';
-import { render } from 'react-dom';
-import Blocks from '../src';
-import Examples from './Examples';
-import './app.css';
 
-const Demo = () => (
-  <div id="page">
-    {Object.keys(Blocks).map((key) => (
-      <Examples key={key} type={key} Component={Blocks[key]} />
-    ))}
-  </div>
+const InputBlock = ({ blockId, properties, methods, value }) => (
+  <label>
+    {properties.label || 'Label'}:
+    <input
+      data-testid={`${blockId}-input`}
+      id={blockId}
+      onChange={(e) => methods.setValue(e.target.value)}
+      value={value || ''}
+    />
+  </label>
 );
 
-export default Demo;
-
-render(<Demo />, document.querySelector('#root'));
+export default InputBlock;

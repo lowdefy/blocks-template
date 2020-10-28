@@ -15,19 +15,20 @@
 */
 
 import React from 'react';
-import { render } from 'react-dom';
-import Blocks from '../src';
-import Examples from './Examples';
-import './app.css';
 
-const Demo = () => (
-  <div id="page">
-    {Object.keys(Blocks).map((key) => (
-      <Examples key={key} type={key} Component={Blocks[key]} />
-    ))}
+const ContextBlock = ({ blockId, content, properties, methods, actions }) => (
+  <div
+    id={blockId}
+    data-testid={blockId}
+    onClick={() => methods.callAction({ action: 'onClick' })}
+    className={methods.makeCssClass([
+      { outline: 'none', cursor: actions.onClick && 'pointer' },
+      properties.style,
+    ])}
+  >
+    {properties.title && <h3>{properties.title}</h3>}
+    {properties.content || (content.content && content.content())}
   </div>
 );
 
-export default Demo;
-
-render(<Demo />, document.querySelector('#root'));
+export default ContextBlock;

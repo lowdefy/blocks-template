@@ -14,6 +14,11 @@
   limitations under the License.
 */
 
-import NewBlock from './blocks/NewBlock/NewBlock';
+import ContainerBlock from './blocks/ContainerBlock/ContainerBlock';
+import ContextBlock from './blocks/ContextBlock/ContextBlock';
+import DisplayBlock from './blocks/DisplayBlock/DisplayBlock';
+import InputBlock from './blocks/InputBlock/InputBlock';
+import ListBlock from './blocks/ListBlock/ListBlock';
 
-export { NewBlock };
+export { ContainerBlock, ContextBlock, DisplayBlock, InputBlock, ListBlock };
+export default { ContainerBlock, ContextBlock, DisplayBlock, InputBlock, ListBlock };
