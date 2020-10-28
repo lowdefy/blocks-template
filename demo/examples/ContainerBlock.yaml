@@ -18,15 +18,6 @@
     onClick:
       - id: one
         type: Test
-- id: properties.hideActionLoading
-  type: ContainerBlock
-  properties:
-    hideActionLoading: true
-    title: Hide Loading
-  actions:
-    onClick:
-      - id: one
-        type: Test
 - id: properties.content
   type: ContainerBlock
   properties:

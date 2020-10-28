@@ -16,13 +16,11 @@
 
 import React from 'react';
 
-const ContainerBlock = ({ blockId, content, properties, methods, actions }) => (
+const ContextBlock = ({ blockId, content, properties, methods, actions }) => (
   <div
     id={blockId}
     data-testid={blockId}
-    onClick={() =>
-      methods.callAction({ action: 'onClick', hideLoading: properties.hideActionLoading })
-    }
+    onClick={() => methods.callAction({ action: 'onClick' })}
     className={methods.makeCssClass([
       { outline: 'none', cursor: actions.onClick && 'pointer' },
       properties.style,
@@ -33,4 +31,4 @@ const ContainerBlock = ({ blockId, content, properties, methods, actions }) => (
   </div>
 );
 
-export default ContainerBlock;
+export default ContextBlock;

@@ -15,13 +15,5 @@
     onClick:
       - id: one
         type: Test
-- id: properties.hideActionLoading
-  type: DisplayBlock
-  properties:
-    hideActionLoading: true
-  actions:
-    onClick:
-      - id: one
-        type: Test
   
 

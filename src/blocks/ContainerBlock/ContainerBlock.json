@@ -10,10 +10,6 @@
           "type": "string",
           "description": "ContainerBlock content string, alternatively provide and list of blocks as ContainerBlock content."
         },
-        "hideActionLoading": {
-          "type": "boolean",
-          "description": "Hide loading spinner when block actions are executing."
-        },
         "style": {
           "type": "object",
           "description": "Style to apply to ContainerBlock div."

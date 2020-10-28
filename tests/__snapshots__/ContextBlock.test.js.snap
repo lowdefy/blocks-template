@@ -94,29 +94,6 @@ exports[`Render properties.content 1`] = `
 </div>
 `;
 
-exports[`Render properties.hideActionLoading 1`] = `
-<div
-  className="{\\"style\\":[{\\"outline\\":\\"none\\",\\"cursor\\":\\"pointer\\"},null]}"
-  data-testid="properties.hideActionLoading"
-  id="properties.hideActionLoading"
-  onClick={[Function]}
->
-  <h3>
-    Hide Loading
-  </h3>
-  <div
-    style={
-      Object {
-        "border": "1px solid red",
-        "padding": 10,
-      }
-    }
-  >
-    content
-  </div>
-</div>
-`;
-
 exports[`Render property.style 1`] = `
 <div
   className="{\\"style\\":[{\\"outline\\":\\"none\\"},{\\"color\\":\\"red\\"}]}"
@@ -182,10 +159,6 @@ exports[`Test Schema default 2`] = `null`;
 exports[`Test Schema properties.content 1`] = `true`;
 
 exports[`Test Schema properties.content 2`] = `null`;
-
-exports[`Test Schema properties.hideActionLoading 1`] = `true`;
-
-exports[`Test Schema properties.hideActionLoading 2`] = `null`;
 
 exports[`Test Schema property.style 1`] = `true`;
 
