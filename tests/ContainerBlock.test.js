@@ -39,5 +39,5 @@ test('callAction onClick', () => {
   const Shell = () => <ContainerBlock {...getProps(block)} methods={methods} />;
   const wrapper = mount(<Shell />);
   wrapper.find('[data-testid="one"]').simulate('click');
-  expect(methods.callAction).toHaveBeenCalledWith({ action: 'onClick', hideLoading: undefined });
+  expect(methods.callAction).toHaveBeenCalledWith({ action: 'onClick' });
 });

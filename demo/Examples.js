@@ -42,7 +42,6 @@ const Examples = ({ type, Component }) => {
           noRefs: true,
         });
         const props = blockDefaults(mockBlockProps({ block, meta, logger }));
-        if (props.schemaErrors) console.log(props.schemaErrors);
         return (
           <div key={block.id}>
             <h4 style={{ borderTop: '1px solid #b1b1b1', padding: 10, margin: 10 }}>
