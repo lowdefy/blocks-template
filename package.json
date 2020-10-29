@@ -36,7 +36,7 @@
     "test": "jest --coverage --config jest.config.json --no-cache"
   },
   "dependencies": {
-    "@lowdefy/block-tools": "1.0.1-alpha.8",
+    "@lowdefy/block-tools": "1.0.1-alpha.9",
     "react": "17.0.1",
     "react-dom": "17.0.1"
   },
