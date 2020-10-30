@@ -71,7 +71,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack", "virtual:447143a6737d058696e2854a2b635b28a913c037405e1710d4a5b53fb8aec3e7f5e91baad5cdadfef016658aaad507744e17c5d5ac481c71b578c078df6cd641#npm:5.1.0"],
             ["webpack-cli", "virtual:447143a6737d058696e2854a2b635b28a913c037405e1710d4a5b53fb8aec3e7f5e91baad5cdadfef016658aaad507744e17c5d5ac481c71b578c078df6cd641#npm:4.0.0"],
             ["webpack-dev-server", "virtual:447143a6737d058696e2854a2b635b28a913c037405e1710d4a5b53fb8aec3e7f5e91baad5cdadfef016658aaad507744e17c5d5ac481c71b578c078df6cd641#npm:3.11.0"],
-            ["webpack-merge", "npm:5.2.0"],
+            ["webpack-merge", "npm:5.3.0"],
             ["yaml-jest", "npm:1.0.5"],
             ["yaml-loader", "npm:0.6.0"]
           ],
@@ -2537,7 +2537,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack", "virtual:447143a6737d058696e2854a2b635b28a913c037405e1710d4a5b53fb8aec3e7f5e91baad5cdadfef016658aaad507744e17c5d5ac481c71b578c078df6cd641#npm:5.1.0"],
             ["webpack-cli", "virtual:447143a6737d058696e2854a2b635b28a913c037405e1710d4a5b53fb8aec3e7f5e91baad5cdadfef016658aaad507744e17c5d5ac481c71b578c078df6cd641#npm:4.0.0"],
             ["webpack-dev-server", "virtual:447143a6737d058696e2854a2b635b28a913c037405e1710d4a5b53fb8aec3e7f5e91baad5cdadfef016658aaad507744e17c5d5ac481c71b578c078df6cd641#npm:3.11.0"],
-            ["webpack-merge", "npm:5.2.0"],
+            ["webpack-merge", "npm:5.3.0"],
             ["yaml-jest", "npm:1.0.5"],
             ["yaml-loader", "npm:0.6.0"]
           ],
@@ -5369,7 +5369,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["core-js-pure", [
         ["npm:3.6.5", {
-          "packageLocation": "./.yarn/unplugged/core-js-pure-npm-3.6.5-c634b57d82/node_modules/core-js-pure/",
+          "packageLocation": "./.yarn/cache/core-js-pure-npm-3.6.5-c634b57d82-91fc8e0b69.zip/node_modules/core-js-pure/",
           "packageDependencies": [
             ["core-js-pure", "npm:3.6.5"]
           ],
@@ -6167,7 +6167,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["ejs", [
         ["npm:2.7.4", {
-          "packageLocation": "./.yarn/unplugged/ejs-npm-2.7.4-879ed38a4e/node_modules/ejs/",
+          "packageLocation": "./.yarn/cache/ejs-npm-2.7.4-879ed38a4e-f066d9a932.zip/node_modules/ejs/",
           "packageDependencies": [
             ["ejs", "npm:2.7.4"]
           ],
@@ -15357,10 +15357,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:5.2.0", {
-          "packageLocation": "./.yarn/cache/webpack-merge-npm-5.2.0-dfa3a85026-edc100b9c7.zip/node_modules/webpack-merge/",
+        ["npm:5.3.0", {
+          "packageLocation": "./.yarn/cache/webpack-merge-npm-5.3.0-40e1ef6a92-7486c5a45a.zip/node_modules/webpack-merge/",
           "packageDependencies": [
-            ["webpack-merge", "npm:5.2.0"],
+            ["webpack-merge", "npm:5.3.0"],
             ["clone-deep", "npm:4.0.1"],
             ["wildcard", "npm:2.0.0"]
           ],
