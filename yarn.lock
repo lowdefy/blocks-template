@@ -1829,9 +1829,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lowdefy/block-tools@npm:1.0.1-alpha.9":
-  version: 1.0.1-alpha.9
-  resolution: "@lowdefy/block-tools@npm:1.0.1-alpha.9"
+"@lowdefy/block-tools@npm:1.0.1-alpha.13":
+  version: 1.0.1-alpha.13
+  resolution: "@lowdefy/block-tools@npm:1.0.1-alpha.13"
   dependencies:
     "@lowdefy/helpers": 1.1.0
     ajv: 6.12.6
@@ -1839,7 +1839,7 @@ __metadata:
     create-emotion: 10.0.27
     react: 17.0.1
     react-dom: 17.0.1
-  checksum: 1283256de9c9035d806822ff66cdf2056a9d0068a2b31004effa5e07f3a80e20ee3eeea3f0fe83db0212f00dbe1ae276a81ee1ddabf80383a3290ef585521536
+  checksum: 24641cfb3cee1426b7e0e357e069cd7bb190c54918c23cd5717b0563506e7e7b48f1e149c17701f18dd0a6ce05123e421fd4cbf95bd23188c073c999b6ca7e64
   languageName: node
   linkType: hard
 
@@ -1851,7 +1851,7 @@ __metadata:
     "@babel/core": 7.11.6
     "@babel/preset-env": 7.11.5
     "@babel/preset-react": 7.10.4
-    "@lowdefy/block-tools": 1.0.1-alpha.9
+    "@lowdefy/block-tools": 1.0.1-alpha.13
     "@wojtekmaj/enzyme-adapter-react-17": 0.1.1
     babel-jest: 26.5.2
     babel-loader: 8.1.0

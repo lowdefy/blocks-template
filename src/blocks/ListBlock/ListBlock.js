@@ -15,6 +15,7 @@
 */
 
 import React, { useEffect } from 'react';
+import { blockDefaultProps } from '@lowdefy/block-tools';
 
 const ListBlock = ({ blockId, methods, properties, list }) => {
   useEffect(() => {
@@ -63,5 +64,7 @@ const ListBlock = ({ blockId, methods, properties, list }) => {
     </div>
   );
 };
+
+ListBlock.defaultProps = blockDefaultProps;
 
 export default ListBlock;
