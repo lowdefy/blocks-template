@@ -16,7 +16,7 @@
 
 import React, { useState } from 'react';
 import YAML from 'js-yaml';
-import { mockBlockProps, blockDefaults, BlockSchemaErrors } from '@lowdefy/block-tools';
+import { stubBlockProps, blockDefaultProps, BlockSchemaErrors } from '@lowdefy/block-tools';
 import yaml from 'react-syntax-highlighter/dist/esm/languages/hljs/yaml';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import vs2015 from 'react-syntax-highlighter/dist/esm/styles/hljs/vs2015';
@@ -29,6 +29,7 @@ const Examples = ({ type, Component }) => {
   // duplicate imported yaml to be mutabile
   const examples = JSON.parse(JSON.stringify(require(`./examples/${type}.yaml`)));
   const meta = require(`../src/blocks/${type}/${type}.json`);
+  Component.defaultProps = blockDefaultProps;
   return (
     <div>
       <h1>{type}</h1>
@@ -41,7 +42,7 @@ const Examples = ({ type, Component }) => {
           // sortKeys: true,
           noRefs: true,
         });
-        const props = blockDefaults(mockBlockProps({ block, meta, logger }));
+        const props = stubBlockProps({ block, meta, logger });
         return (
           <div key={block.id}>
             <h4 style={{ borderTop: '1px solid #b1b1b1', padding: 10, margin: 10 }}>

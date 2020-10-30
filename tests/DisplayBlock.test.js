@@ -27,9 +27,8 @@ import meta from '../src/blocks/DisplayBlock/DisplayBlock.json';
 runRenderTests({ examples, Block: DisplayBlock, meta });
 runBlockSchemaTests({ examples, meta });
 
-const { after, before, methods, getProps } = mockBlock({ meta });
+const { before, methods, getProps } = mockBlock({ meta });
 beforeEach(before);
-afterEach(after);
 
 test('callAction onClick', () => {
   const block = {

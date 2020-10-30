@@ -27,9 +27,8 @@ import meta from '../src/blocks/ContextBlock/ContextBlock.json';
 runRenderTests({ examples, Block: ContextBlock, meta });
 runBlockSchemaTests({ examples, meta });
 
-const { after, before, methods, getProps } = mockBlock({ meta });
+const { before, methods, getProps } = mockBlock({ meta });
 beforeEach(before);
-afterEach(after);
 
 test('callAction onClick', () => {
   const block = {

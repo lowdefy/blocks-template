@@ -15,6 +15,7 @@
 */
 
 import React from 'react';
+import { blockDefaultProps } from '@lowdefy/block-tools';
 
 const ContextBlock = ({ blockId, content, properties, methods, actions }) => (
   <div
@@ -30,5 +31,7 @@ const ContextBlock = ({ blockId, content, properties, methods, actions }) => (
     {properties.content || (content.content && content.content())}
   </div>
 );
+
+ContextBlock.defaultProps = blockDefaultProps;
 
 export default ContextBlock;

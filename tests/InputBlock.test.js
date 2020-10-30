@@ -27,18 +27,21 @@ import meta from '../src/blocks/InputBlock/InputBlock.json';
 runRenderTests({ examples, Block: InputBlock, meta });
 runBlockSchemaTests({ examples, meta });
 
-const { after, before, getProps } = mockBlock({ meta });
+const { before, getProps } = mockBlock({ meta });
 beforeEach(before);
-afterEach(after);
 
 it('test input change', () => {
   const block = {
     id: 'one',
     type: 'InputBlock',
   };
-  const Shell = () => <InputBlock {...getProps(block)} />;
+  let props;
+  const Shell = () => {
+    props = getProps(block);
+    return <InputBlock {...props} />;
+  };
   const wrapper = mount(<Shell />);
   expect(wrapper.find('[data-testid="one-input"]').prop('value')).toEqual('');
   wrapper.find('[data-testid="one-input"]').simulate('change', { target: { value: 'new value' } });
-  expect(wrapper.find('[data-testid="one-input"]').prop('value')).toEqual('new value');
+  expect(props.methods.setValue).toHaveBeenCalledWith('new value');
 });

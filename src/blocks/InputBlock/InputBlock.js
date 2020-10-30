@@ -15,6 +15,7 @@
 */
 
 import React from 'react';
+import { blockDefaultProps } from '@lowdefy/block-tools';
 
 const InputBlock = ({ blockId, properties, methods, value }) => (
   <label>
@@ -27,5 +28,7 @@ const InputBlock = ({ blockId, properties, methods, value }) => (
     />
   </label>
 );
+
+InputBlock.defaultProps = blockDefaultProps;
 
 export default InputBlock;

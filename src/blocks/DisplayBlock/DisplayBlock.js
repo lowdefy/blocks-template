@@ -15,6 +15,7 @@
 */
 
 import React from 'react';
+import { blockDefaultProps } from '@lowdefy/block-tools';
 
 const DisplayBlock = ({ blockId, properties, methods, actions }) => (
   <div
@@ -29,5 +30,7 @@ const DisplayBlock = ({ blockId, properties, methods, actions }) => (
     New Lowdefy display block {properties.title && `with title: ${properties.title}`}
   </div>
 );
+
+DisplayBlock.defaultProps = blockDefaultProps;
 
 export default DisplayBlock;
