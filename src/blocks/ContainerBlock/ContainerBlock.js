@@ -15,8 +15,9 @@
 */
 
 import React from 'react';
+import { blockDefaultProps } from '@lowdefy/block-tools';
 
-const ContextBlock = ({ blockId, content, properties, methods, actions }) => (
+const ContainerBlock = ({ blockId, content, properties, methods, actions }) => (
   <div
     id={blockId}
     data-testid={blockId}
@@ -31,4 +32,6 @@ const ContextBlock = ({ blockId, content, properties, methods, actions }) => (
   </div>
 );
 
-export default ContextBlock;
+ContainerBlock.defaultProps = blockDefaultProps;
+
+export default ContainerBlock;

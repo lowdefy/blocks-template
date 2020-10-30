@@ -27,9 +27,8 @@ import meta from '../src/blocks/DisplayBlock/DisplayBlock.json';
 runRenderTests({ examples, Block: DisplayBlock, meta });
 runBlockSchemaTests({ examples, meta });
 
-const { after, before, methods, getProps } = mockBlock({ meta });
+const { before, methods, getProps } = mockBlock({ meta });
 beforeEach(before);
-afterEach(after);
 
 test('callAction onClick', () => {
   const block = {
@@ -40,5 +39,5 @@ test('callAction onClick', () => {
   const Shell = () => <DisplayBlock {...getProps(block)} methods={methods} />;
   const wrapper = mount(<Shell />);
   wrapper.find('[data-testid="one"]').simulate('click');
-  expect(methods.callAction).toHaveBeenCalledWith({ action: 'onClick', hideLoading: undefined });
+  expect(methods.callAction).toHaveBeenCalledWith({ action: 'onClick' });
 });

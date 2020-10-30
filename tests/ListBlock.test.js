@@ -27,9 +27,8 @@ import meta from '../src/blocks/ListBlock/ListBlock.json';
 runRenderTests({ examples, Block: ListBlock, meta });
 runBlockSchemaTests({ examples, meta });
 
-const { after, before, methods, getProps } = mockBlock({ meta });
+const { before, methods, getProps } = mockBlock({ meta });
 beforeEach(before);
-afterEach(after);
 
 it('test button clicks', () => {
   const block = {
