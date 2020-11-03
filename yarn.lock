@@ -1697,7 +1697,7 @@ __metadata:
     react-syntax-highlighter: 15.3.0
     react-test-renderer: 17.0.1
     style-loader: 2.0.0
-    webpack: 5.3.2
+    webpack: 5.4.0
     webpack-cli: 4.1.0
     webpack-dev-server: 3.11.0
     webpack-merge: 5.3.0
@@ -11316,9 +11316,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"webpack@npm:5.3.2":
-  version: 5.3.2
-  resolution: "webpack@npm:5.3.2"
+"webpack@npm:5.4.0":
+  version: 5.4.0
+  resolution: "webpack@npm:5.4.0"
   dependencies:
     "@types/eslint-scope": ^3.7.0
     "@types/estree": ^0.0.45
@@ -11349,7 +11349,7 @@ fsevents@^1.2.7:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: 334a24989d164e4652f6afd2ca2302ecd7d3fd5a963164f60e368ca812b5036fff9b1b6bdbf0257b94a4bbe401ccc0d2922b262631011ec2bcbcc810bcae88a3
+  checksum: 1da5d7f1f0ec1f8f0a0ef2ef4b374805a9abd9a1a30e8834ab4b2f7793ce43251ea5c50b0132884666bd5189711f2049c66bb06ca6c381bfb022355619dc93bc
   languageName: node
   linkType: hard
 
