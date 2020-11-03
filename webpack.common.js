@@ -3,7 +3,7 @@ const { ModuleFederationPlugin } = require('webpack').container;
 const path = require('path');
 const fs = require('fs');
 
-const package = require('./package.json');
+const packageJson = require('./package.json');
 
 const sanitizeName = (name) => {
   return name
@@ -30,6 +30,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
   },
+  resolve: { fallback: { buffer: require.resolve('buffer/') } },
   module: {
     rules: [
       // TODO: FIXME: do NOT webpack 5 support with this
@@ -69,21 +70,21 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: sanitizeName(package.name),
-      library: { type: 'var', name: sanitizeName(package.name) },
+      name: sanitizeName(packageJson.name),
+      library: { type: 'var', name: sanitizeName(packageJson.name) },
       filename: 'remoteEntry.js',
       exposes: blockModules(),
       shared: {
-        ...package.dependencies,
+        ...packageJson.dependencies,
         react: {
           singleton: true, // only a single version of the shared module is allowed
           requiredVersion: '~17.0.0',
-          version: package.dependencies.react,
+          version: packageJson.dependencies.react,
         },
         'react-dom': {
           singleton: true, // only a single version of the shared module is allowed
           requiredVersion: '~17.0.0',
-          version: package.dependencies['react-dom'],
+          version: packageJson.dependencies['react-dom'],
         },
       },
     }),
