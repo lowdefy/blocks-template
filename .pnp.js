@@ -65,7 +65,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:17.0.1"],
             ["react-dom", "virtual:b855885d83aa00462f94d8341ee01eaddfdb6d42ea046886d21d01f1ded9ff1ae4eb8d4226560729686d1635edbaf18fd473ac4cf7ec85ede43b354af3bc3ab9#npm:17.0.1"],
             ["react-markdown", "virtual:447143a6737d058696e2854a2b635b28a913c037405e1710d4a5b53fb8aec3e7f5e91baad5cdadfef016658aaad507744e17c5d5ac481c71b578c078df6cd641#npm:5.0.2"],
-            ["react-syntax-highlighter", "virtual:447143a6737d058696e2854a2b635b28a913c037405e1710d4a5b53fb8aec3e7f5e91baad5cdadfef016658aaad507744e17c5d5ac481c71b578c078df6cd641#npm:15.3.0"],
+            ["react-syntax-highlighter", "virtual:447143a6737d058696e2854a2b635b28a913c037405e1710d4a5b53fb8aec3e7f5e91baad5cdadfef016658aaad507744e17c5d5ac481c71b578c078df6cd641#npm:15.3.1"],
             ["react-test-renderer", "virtual:447143a6737d058696e2854a2b635b28a913c037405e1710d4a5b53fb8aec3e7f5e91baad5cdadfef016658aaad507744e17c5d5ac481c71b578c078df6cd641#npm:17.0.1"],
             ["style-loader", "virtual:447143a6737d058696e2854a2b635b28a913c037405e1710d4a5b53fb8aec3e7f5e91baad5cdadfef016658aaad507744e17c5d5ac481c71b578c078df6cd641#npm:2.0.0"],
             ["webpack", "virtual:447143a6737d058696e2854a2b635b28a913c037405e1710d4a5b53fb8aec3e7f5e91baad5cdadfef016658aaad507744e17c5d5ac481c71b578c078df6cd641#npm:5.4.0"],
@@ -2334,7 +2334,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:17.0.1"],
             ["react-dom", "virtual:b855885d83aa00462f94d8341ee01eaddfdb6d42ea046886d21d01f1ded9ff1ae4eb8d4226560729686d1635edbaf18fd473ac4cf7ec85ede43b354af3bc3ab9#npm:17.0.1"],
             ["react-markdown", "virtual:447143a6737d058696e2854a2b635b28a913c037405e1710d4a5b53fb8aec3e7f5e91baad5cdadfef016658aaad507744e17c5d5ac481c71b578c078df6cd641#npm:5.0.2"],
-            ["react-syntax-highlighter", "virtual:447143a6737d058696e2854a2b635b28a913c037405e1710d4a5b53fb8aec3e7f5e91baad5cdadfef016658aaad507744e17c5d5ac481c71b578c078df6cd641#npm:15.3.0"],
+            ["react-syntax-highlighter", "virtual:447143a6737d058696e2854a2b635b28a913c037405e1710d4a5b53fb8aec3e7f5e91baad5cdadfef016658aaad507744e17c5d5ac481c71b578c078df6cd641#npm:15.3.1"],
             ["react-test-renderer", "virtual:447143a6737d058696e2854a2b635b28a913c037405e1710d4a5b53fb8aec3e7f5e91baad5cdadfef016658aaad507744e17c5d5ac481c71b578c078df6cd641#npm:17.0.1"],
             ["style-loader", "virtual:447143a6737d058696e2854a2b635b28a913c037405e1710d4a5b53fb8aec3e7f5e91baad5cdadfef016658aaad507744e17c5d5ac481c71b578c078df6cd641#npm:2.0.0"],
             ["webpack", "virtual:447143a6737d058696e2854a2b635b28a913c037405e1710d4a5b53fb8aec3e7f5e91baad5cdadfef016658aaad507744e17c5d5ac481c71b578c078df6cd641#npm:5.4.0"],
@@ -10700,10 +10700,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["react-syntax-highlighter", [
-        ["virtual:447143a6737d058696e2854a2b635b28a913c037405e1710d4a5b53fb8aec3e7f5e91baad5cdadfef016658aaad507744e17c5d5ac481c71b578c078df6cd641#npm:15.3.0", {
-          "packageLocation": "./.yarn/$$virtual/react-syntax-highlighter-virtual-9ec2a9139c/0/cache/react-syntax-highlighter-npm-15.3.0-0a74e2bc36-07a40895ee.zip/node_modules/react-syntax-highlighter/",
+        ["virtual:447143a6737d058696e2854a2b635b28a913c037405e1710d4a5b53fb8aec3e7f5e91baad5cdadfef016658aaad507744e17c5d5ac481c71b578c078df6cd641#npm:15.3.1", {
+          "packageLocation": "./.yarn/$$virtual/react-syntax-highlighter-virtual-a17273e755/0/cache/react-syntax-highlighter-npm-15.3.1-d18b3fbab2-32e5b2480f.zip/node_modules/react-syntax-highlighter/",
           "packageDependencies": [
-            ["react-syntax-highlighter", "virtual:447143a6737d058696e2854a2b635b28a913c037405e1710d4a5b53fb8aec3e7f5e91baad5cdadfef016658aaad507744e17c5d5ac481c71b578c078df6cd641#npm:15.3.0"],
+            ["react-syntax-highlighter", "virtual:447143a6737d058696e2854a2b635b28a913c037405e1710d4a5b53fb8aec3e7f5e91baad5cdadfef016658aaad507744e17c5d5ac481c71b578c078df6cd641#npm:15.3.1"],
             ["@babel/runtime", "npm:7.12.1"],
             ["@types/react", null],
             ["highlight.js", "npm:10.3.2"],
