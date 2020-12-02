@@ -2,6 +2,10 @@
   "category": "input",
   "valueType": "string",
   "loading": false,
+  "test": {
+    "validation": true,
+    "required": true
+  },
   "schema": {
     "properties": {
       "type": "object",
