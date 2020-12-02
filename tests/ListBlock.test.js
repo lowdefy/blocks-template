@@ -24,6 +24,8 @@ import { ListBlock } from '../src';
 import examples from '../demo/examples/ListBlock.yaml';
 import meta from '../src/blocks/ListBlock/ListBlock.json';
 
+jest.spyOn(window, 'alert').mockImplementation(() => {});
+
 runRenderTests({ examples, Block: ListBlock, meta });
 runBlockSchemaTests({ examples, meta });
 
@@ -43,9 +45,8 @@ it('test button clicks', () => {
         ],
       },
     },
-    methods,
   };
-  const Shell = () => <ListBlock {...getProps(block)} />;
+  const Shell = () => <ListBlock {...getProps(block)} methods={methods} />;
   const wrapper = mount(<Shell />);
   wrapper.find('[data-testid="one-pushItem"]').simulate('click');
   expect(methods.pushItem).toHaveBeenCalled();

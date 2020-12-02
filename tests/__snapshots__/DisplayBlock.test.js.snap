@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Render actions.onClick 1`] = `
+exports[`Render actions.onClick - value[0] 1`] = `
 <div
   className="{\\"style\\":[{\\"outline\\":\\"none\\",\\"cursor\\":\\"pointer\\"},null]}"
   data-testid="actions.onClick"
@@ -11,7 +11,7 @@ exports[`Render actions.onClick 1`] = `
 </div>
 `;
 
-exports[`Render default 1`] = `
+exports[`Render default - value[0] 1`] = `
 <div
   className="{\\"style\\":[{\\"outline\\":\\"none\\"},null]}"
   data-testid="default"
@@ -22,7 +22,7 @@ exports[`Render default 1`] = `
 </div>
 `;
 
-exports[`Render property.style 1`] = `
+exports[`Render property.style - value[0] 1`] = `
 <div
   className="{\\"style\\":[{\\"outline\\":\\"none\\"},{\\"color\\":\\"red\\"}]}"
   data-testid="property.style"
@@ -33,7 +33,7 @@ exports[`Render property.style 1`] = `
 </div>
 `;
 
-exports[`Render property.title 1`] = `
+exports[`Render property.title - value[0] 1`] = `
 <div
   className="{\\"style\\":[{\\"outline\\":\\"none\\"},null]}"
   data-testid="property.title"
