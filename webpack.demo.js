@@ -1,5 +1,6 @@
 const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const type = require('@lowdefy/helpers').type;
 const path = require('path');
 const { merge } = require('webpack-merge');
 
@@ -14,6 +15,10 @@ const sanitizeName = (name) => {
     .replace(/^[a-zA-Z0-9_]/g, '_');
 };
 
+const port = type.isNumber(process.argv[process.argv.findIndex((val) => val === '--port') + 1])
+  ? process.argv[process.argv.findIndex((val) => val === '--port') + 1]
+  : 3002;
+
 const addRemoteEntryUrl = (content, absoluteFrom) => {
   const scope = sanitizeName(packageJson.name);
   const meta = JSON.parse(content);
@@ -21,7 +26,7 @@ const addRemoteEntryUrl = (content, absoluteFrom) => {
     module: path.basename(absoluteFrom, '.json'),
     scope,
     version: packageJson.version,
-    remoteEntryUrl: 'http://localhost:3002/remoteEntry.js',
+    remoteEntryUrl: `http://localhost:${port}/remoteEntry.js`,
   };
   return JSON.stringify(meta);
 };
@@ -32,7 +37,7 @@ module.exports = merge(common, {
   devtool: 'eval-source-map',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    port: 3002,
+    port,
     historyApiFallback: true,
   },
   plugins: [
