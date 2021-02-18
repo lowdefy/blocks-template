@@ -43,6 +43,6 @@ types:
 - Lowdefy docs - https://docs.lowdefy.com
 - Lowdefy website - https://lowdefy.com
 
-## Licence: Appache-2.0
+## Licence: MIT
 
 See the LICENSE.md file for license rights and limitations.
