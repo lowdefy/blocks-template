@@ -1,22 +1,17 @@
 {
   "name": "@lowdefy/blocks-template",
-  "version": "3.3.0",
-  "license": "Apache-2.0",
+  "version": "3.10.0",
+  "license": "MIT",
   "description": "A template example for Lowdefy blocks.",
   "homepage": "https://lowdefy.com",
-  "bugs": {
-    "url": "https://github.com/lowdefy/blocks-template/issues"
-  },
-  "contributors": [
-    {
-      "name": "Sam Tolmay",
-      "url": "https://github.com/SamTolmay"
-    },
-    {
-      "name": "Gerrie van Wyk",
-      "url": "https://github.com/Gervwyk"
-    }
+  "keywords": [
+    "lowdefy",
+    "lowdefy-blocks"
   ],
+  "bugs": {
+    "url": "https://github.com/lowdefy/lowdefy/issues"
+  },
+  "contributors": [],
   "repository": {
     "type": "git",
     "url": "https://github.com/lowdefy/blocks-template.git"
@@ -27,54 +22,29 @@
   ],
   "scripts": {
     "build": "webpack --config webpack.prod.js",
-    "clean": "rm -rf dist",
-    "npm-publish": "npm publish --access public",
     "prepare": "yarn build",
-    "prepublishOnly": "yarn build",
-    "start:dev": "webpack serve --config webpack.dev.js",
-    "start": "webpack serve --config webpack.demo.js",
-    "test": "jest --coverage --config jest.config.js --no-cache"
+    "start": "webpack serve --config webpack.dev.js"
   },
   "dependencies": {
-    "@lowdefy/block-tools": "3.3.0",
+    "@lowdefy/block-tools": "3.10.0",
     "react": "17.0.1",
     "react-dom": "17.0.1"
   },
   "devDependencies": {
-    "@babel/cli": "7.12.10",
-    "@babel/core": "7.12.10",
-    "@babel/preset-env": "7.12.11",
-    "@babel/preset-react": "7.12.10",
-    "@lowdefy/helpers": "3.3.0",
-    "@wojtekmaj/enzyme-adapter-react-17": "0.4.1",
-    "babel-jest": "26.6.3",
+    "@babel/cli": "7.12.16",
+    "@babel/core": "7.12.16",
+    "@babel/preset-env": "7.12.16",
+    "@babel/preset-react": "7.12.13",
     "babel-loader": "8.2.2",
     "buffer": "6.0.3",
     "clean-webpack-plugin": "3.0.0",
     "copy-webpack-plugin": "7.0.0",
-    "css-loader": "5.0.1",
-    "enzyme": "3.11.0",
-    "enzyme-to-json": "3.6.1",
-    "eslint": "7.18.0",
-    "eslint-config-prettier": "7.2.0",
-    "eslint-plugin-import": "2.22.1",
-    "eslint-plugin-jsx-a11y": "6.4.1",
-    "eslint-plugin-prettier": "3.3.1",
-    "eslint-plugin-react": "7.22.0",
-    "eslint-plugin-react-hooks": "4.2.0",
-    "html-webpack-plugin": "4.5.1",
-    "identity-obj-proxy": "3.0.0",
-    "jest": "26.6.3",
-    "jest-serializer-html": "7.0.0",
-    "js-yaml": "4.0.0",
-    "react-markdown": "5.0.3",
-    "react-syntax-highlighter": "15.4.3",
+    "css-loader": "5.0.2",
+    "prettier": "2.2.1",
     "style-loader": "2.0.0",
-    "webpack": "5.15.0",
-    "webpack-cli": "4.3.1",
+    "webpack": "5.22.0",
+    "webpack-cli": "4.5.0",
     "webpack-dev-server": "3.11.2",
-    "webpack-merge": "5.7.3",
-    "yaml-jest": "1.0.5",
-    "yaml-loader": "0.6.0"
+    "webpack-merge": "5.7.3"
   }
 }
