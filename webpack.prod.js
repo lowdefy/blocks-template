@@ -22,6 +22,8 @@ const addRemoteEntryUrl = (content, absoluteFrom) => {
       module: path.basename(absoluteFrom, '.json'),
       scope,
       version: packageJson.version,
+      // unpkg can result in a unreliable module federation experience.
+      // Deploy you block to your preferred static file host and update the remoteEntryUrl.
       remoteEntryUrl: `https://unpkg.com/${packageJson.name}@${packageJson.version}/dist/remoteEntry.js`,
     };
   }
@@ -36,8 +38,8 @@ module.exports = merge(common, {
       patterns: [
         {
           from: 'src/blocks/**/*.json',
-          transformPath: (targetPath) => {
-            return path.join('meta', path.basename(targetPath));
+          to: ({ absoluteFilename }) => {
+            return path.join('meta', path.basename(absoluteFilename));
           },
           transform: addRemoteEntryUrl,
         },

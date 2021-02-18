@@ -1,12 +1,13 @@
 const CopyPlugin = require('copy-webpack-plugin');
-const type = require('@lowdefy/helpers').type;
 const path = require('path');
 const { merge } = require('webpack-merge');
 
 const common = require('./webpack.common.js');
 const packageJson = require('./package.json');
 
-const port = type.isNumber(process.argv[process.argv.findIndex((val) => val === '--port') + 1])
+const port = Number.isInteger(
+  Number(process.argv[process.argv.findIndex((val) => val === '--port') + 1])
+)
   ? process.argv[process.argv.findIndex((val) => val === '--port') + 1]
   : 3002;
 
@@ -37,14 +38,15 @@ module.exports = merge(common, {
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     port,
+    historyApiFallback: true,
   },
   plugins: [
     new CopyPlugin({
       patterns: [
         {
           from: 'src/blocks/**/*.json',
-          transformPath: (targetPath) => {
-            return path.join('meta', path.basename(targetPath));
+          to: ({ absoluteFilename }) => {
+            return path.join('meta', path.basename(absoluteFilename));
           },
           transform: addRemoteEntryUrl,
         },

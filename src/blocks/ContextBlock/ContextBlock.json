@@ -20,12 +20,13 @@
         }
       }
     },
-    "actions": {
+    "events": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "onClick": {
-          "type": "array"
+          "type": "array",
+          "description": "Trigger onClick actions when container is clicked."
         }
       }
     }
