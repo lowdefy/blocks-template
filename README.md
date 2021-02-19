@@ -17,7 +17,7 @@ Then run `yarn install`, then `yarn start`.
 4. Add the `types` to you the lowdefy.yaml. For example:
 
 ```yaml
-name: may-app
+name: my-app
 lowdefy: 3.10.0
 types:
   DisplayBlock:
@@ -28,6 +28,8 @@ types:
 5. Use your new block type in your Lowdefy app.
 6. Start your Lowdefy app and test if it works, run: `npx lowdefy@latest dev`
 7. Continue to develop your block React component. Change to your block will need auto reload the app in the browser, you need to hit refresh.
+8. Before deploying your blocks to a static file server, remember to change the `remoteEntryUrl` field in the `webpack.prod.js` file to your block URL.
+9. Deploy your blocks and enjoy your ☕️.
 
 ## Other Lowdefy Blocks Packages
 
@@ -42,7 +44,9 @@ types:
 - Getting started with Lowdefy - https://docs.lowdefy.com/tutorial-setup
 - Lowdefy docs - https://docs.lowdefy.com
 - Lowdefy website - https://lowdefy.com
+- Community forum - https://github.com/lowdefy/lowdefy/discussions
+- Bug reports and feature requests - https://github.com/lowdefy/lowdefy/issues
 
-## Licence: Appache-2.0
+## Licence
 
-See the LICENSE.md file for license rights and limitations.
+[MIT](https://github.com/lowdefy/blocks-template/blob/main/LICENSE)
