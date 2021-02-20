@@ -14,7 +14,7 @@ A Lowdefy block has two files, the block meta data and the block React component
 4. Add the `types` to you the lowdefy.yaml. For example:
 
 ```yaml
-name: may-app
+name: my-app
 lowdefy: 3.10.0
 types:
   DisplayBlock:
@@ -41,7 +41,9 @@ types:
 - Getting started with Lowdefy - https://docs.lowdefy.com/tutorial-setup
 - Lowdefy docs - https://docs.lowdefy.com
 - Lowdefy website - https://lowdefy.com
+- Community forum - https://github.com/lowdefy/lowdefy/discussions
+- Bug reports and feature requests - https://github.com/lowdefy/lowdefy/issues
 
-## Licence: MIT
+## Licence
 
-See the LICENSE.md file for license rights and limitations.
+[MIT](https://github.com/lowdefy/blocks-template/blob/main/LICENSE)
