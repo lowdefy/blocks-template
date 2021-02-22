@@ -15,7 +15,7 @@ A Lowdefy block has two files, the block meta data and the block React component
 
 ```yaml
 name: my-app
-lowdefy: 3.10.0
+lowdefy: 3.10.1
 types:
   DisplayBlock:
     url: http://localhost:3002/meta/DisplayBlock.json
@@ -35,10 +35,11 @@ types:
 - [@lowdefy/blocks-color-selectors](https://github.com/lowdefy/lowdefy/tree/main/packages/blocks/blocksColorSelectorsd): Official Lowdefy blocks for [react-color](https://casesandberg.github.io/react-color/).
 - [@lowdefy/blocks-markdown](https://github.com/lowdefy/lowdefy/tree/main/packages/blocks/blocksMarkdown): Official Lowdefy blocks to render Markdown.
 - [@lowdefy/blocks-amcharts](https://github.com/lowdefy/blocks-amcharts): Lowdefy blocks to render [AmCharts v4](https://www.amcharts.com/).
+- [@lowdefy/blocks-aggrid](https://github.com/lowdefy/blocks-aggrid): Lowdefy blocks to render [Ag-Grid](https://www.ag-grid.com/) tables.
 
 ## More Lowdefy resources
 
-- Getting started with Lowdefy - https://docs.lowdefy.com/tutorial-setup
+- Getting started with Lowdefy - https://docs.lowdefy.com/tutorial-start
 - Lowdefy docs - https://docs.lowdefy.com
 - Lowdefy website - https://lowdefy.com
 - Community forum - https://github.com/lowdefy/lowdefy/discussions
